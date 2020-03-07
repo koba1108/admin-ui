@@ -4,18 +4,20 @@ html {
   height: 100%; }
 
 body {
-  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: Helvetica Neue, Helvetica, Hiragino Sans, 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
   height: 100vh; }
 
 header {
   border-top: #337ab7 0.5rem solid;
   border-bottom: #ddd 0.25rem solid;
-  position: fixed;
   width: 100%;
   background: #fff;
   z-index: 100; }
 header h1 {
   color: #7b7979; }
+
+footer {
+  border-bottom: #337ab7 0.5rem solid; }
 
 /* STRUCTURE */
 .wrapper {
@@ -23,7 +25,7 @@ header h1 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  min-height: 100%;
+  min-height: calc(100% - 30%);
   padding: 20px; }
 
 .login_title {
@@ -57,6 +59,9 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 */
+.bg_line {
+  background: url("../img/h2_line.png") repeat-x left center; }
+
 /* FORM TYPOGRAPHY*/
 input[type=button], input[type=submit], input[type=reset] {
   border: none;

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<!-- Optional JavaScript -->
+	<script src="js/jquery.js"></script>
+	<script src="js/popper.min.js"></script><!--selectbox用-->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!--<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>-->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+	<title>監視画面</title>
+
+</head>
+<body>
+<header>
+	<h1 class="p-3 text-center">監視画面</h1>
+</header>
+<main>
+	<section class="py-4">
+		<div class="container">
+			<div class="row mr-1 mb-3">
+				<div class="col-3"></div>
+				<div class="col-9 mb"><h2 class="h-100 d-flex align-items-center h3 text-secondary">集　計</h2></div>
+				<!--<div class="col-4 bg_line"></div>-->
+				<!--<div class="col-2"><a href="" class="btn btn-warning btn-lg w-100 text-center">更　新</a></div>-->
+			</div>
+			<div class="row mb-2">
+				<div class="col-3">
+					<div class="list-group">
+						<a href="monitor_monitoring.html" class="list-group-item mb-2 mr-2">監　視</a>
+						<a href="#" class="list-group-item mb-2 mr-2 active">集　計</a>
+						<a href="#" class="list-group-item mb-2 mr-2">アカウント管理</a>
+						<a href="monitor_charger.html" class="list-group-item mr-2">charger管理</a>
+					</div>
+				</div>
+				<div class="col-9">
+					<div class="bg-light text-center border border-secondary rounded mr-lg-5 mb-5 ml-lg-5 p-2">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							日付選択
+							</button>
+							<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">日付選択1</a>
+							<a class="dropdown-item" href="#">日付選択2</a>
+							<a class="dropdown-item" href="#">日付選択3</a>
+							<!--<div class="dropdown-divider"></div>-->
+							</div><!-- /.dropdown-menu -->
+						</div><!-- /.btn-group -->
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							カテゴリ
+							</button>
+							<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">カテゴリ1</a>
+							<a class="dropdown-item" href="#">カテゴリ2</a>
+							<a class="dropdown-item" href="#">カテゴリ3</a>
+							<!--<div class="dropdown-divider"></div>-->
+							</div><!-- /.dropdown-menu -->
+						</div><!-- /.btn-group -->
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							対象選択
+							</button>
+							<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">対象選択1</a>
+							<a class="dropdown-item" href="#">対象選択2</a>
+							<a class="dropdown-item" href="#">対象選択3</a>
+							<!--<div class="dropdown-divider"></div>-->
+							</div><!-- /.dropdown-menu -->
+						</div><!-- /.btn-group -->
+						<div class="btn-group">
+							<a href="" class="btn btn-warning btn-lg w-100 text-center ml-2">表　示</a>
+						</div>
+					</div>
+					<div><h3 class="h-100 d-flex align-items-center h5 text-secondary font-weight-normal">距離と時間の折れ線グラフ</h3></div>
+					<div class="mb-5">
+					 <canvas id="myLineChart1"></canvas>
+					</div>
+        			<!--<div id="chart-area" class="mb-5">
+        				<img src="img/sample_graph.png" alt="" class="img-fluid">
+        			</div>-->
+					<div><h3 class="h-100 d-flex align-items-center h5 text-secondary font-weight-normal">SOCと距離の折れ線グラフ</h3></div>
+        			<div class="mb-5">
+					 <canvas id="myLineChart2"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-9">
+					<table class="table table-bordered text-secondary">
+						<tr>
+							<td class="bg-light" style="width:40%">運行台数</td>
+							<td class="text-center">1回</td>
+						</tr>
+						<tr>
+							<td class="bg-light">総走行時間</td>
+							<td class="text-center">1時間</td>
+						</tr>
+						<tr>
+							<td class="bg-light">走行時間TOP5</td>
+							<td class="text-center">1位: D1 2位: D4 3位: D14 4位: D21 5位: D5 </td>
+						</tr>
+						<tr>
+							<td class="bg-light">総充電時間</td>
+							<td class="text-center">1時間</td>
+						</tr>
+						<tr>
+							<td class="bg-light">平均速度</td>
+							<td class="text-center">60km</td>
+						</tr>
+						<tr>
+							<td class="bg-light">平均SOC</td>
+							<td class="text-center">10</td>
+						</tr>
+						<tr>
+							<td class="bg-light">バッテリアラート回数</td>
+							<td class="text-center">1回</td>
+						</tr>
+						<tr>
+							<td class="bg-light">バッテリアラートメッセージ</td>
+							<td class="text-center">○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○</td>
+						</tr>
+						<tr>
+							<td class="bg-light">chargerアラート回数</td>
+							<td class="text-center">1回</td>
+						</tr>
+						<tr>
+							<td class="bg-light">chargerアラートメッセージ</td>
+							<td class="text-center">○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script><!--グラフ用-->
+	<script>
+  var ctx1 = document.getElementById("myLineChart1");
+  var ctx2 = document.getElementById("myLineChart2");
+  var myLineChart1 = new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['0', '1時間', '2時間', '3時間', '4時間'],
+      datasets: [
+        {
+          label: '○○○',
+          data: [35, 34, 37, 35, 34, 35, 34, 25],
+          borderColor: "rgba(255,100,100,1)",
+          backgroundColor: "rgba(229,229,229,.2)"
+        }
+      ],
+    },
+    options: {
+      title: {
+        display: true,
+        text: '日付 カテゴリ 対象選択を表示'
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            suggestedMax: 60,
+            suggestedMin: 0,
+            stepSize: 10,
+            callback: function(value, index, values){
+              return  value +  'km'
+            }
+          }
+        }]
+      },
+    }
+  });
+  var myLineChart2 = new Chart(ctx2, {
+    type: 'line',
+    data: {
+      labels: ['0', '1時間', '2時間', '3時間', '4時間'],
+      datasets: [
+        {
+          label: '○○○',
+          data: [35, 34, 37, 35, 34, 35, 34, 25],
+          borderColor: "rgba(255,100,100,1)",
+          backgroundColor: "rgba(229,229,229,.2)"
+        }
+      ],
+    },
+    options: {
+      title: {
+        display: true,
+        text: '日付 カテゴリ 対象選択を表示'
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            suggestedMax: 60,
+            suggestedMin: 0,
+            stepSize: 10,
+            callback: function(value, index, values){
+              return  value +  'km'
+            }
+          }
+        }]
+      },
+    }
+     });
+  </script>
+</body>
+</html>
