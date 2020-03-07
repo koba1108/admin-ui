@@ -148,73 +148,73 @@
 <footer>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script><!--グラフ用-->
-	<script>
-  var ctx1 = document.getElementById("myLineChart1");
-  var ctx2 = document.getElementById("myLineChart2");
-  var myLineChart1 = new Chart(ctx1, {
-    type: 'line',
-    data: {
-      labels: ['0', '1時間', '2時間', '3時間', '4時間'],
-      datasets: [
-        {
-          label: '○○○',
-          data: [35, 34, 37, 35, 34, 35, 34, 25],
-          borderColor: "rgba(255,100,100,1)",
-          backgroundColor: "rgba(229,229,229,.2)"
-        }
-      ],
-    },
-    options: {
-      title: {
-        display: true,
-        text: '日付 カテゴリ 対象選択を表示'
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            suggestedMax: 60,
-            suggestedMin: 0,
-            stepSize: 10,
-            callback: function(value, index, values){
-              return  value +  'km'
-            }
-          }
-        }]
-      },
-    }
-  });
-  var myLineChart2 = new Chart(ctx2, {
-    type: 'line',
-    data: {
-      labels: ['0', '1時間', '2時間', '3時間', '4時間'],
-      datasets: [
-        {
-          label: '○○○',
-          data: [35, 34, 37, 35, 34, 35, 34, 25],
-          borderColor: "rgba(255,100,100,1)",
-          backgroundColor: "rgba(229,229,229,.2)"
-        }
-      ],
-    },
-    options: {
-      title: {
-        display: true,
-        text: '日付 カテゴリ 対象選択を表示'
-      },
-      scales: {
-        yAxes: [{
-          ticks: {
-            suggestedMax: 60,
-            suggestedMin: 0,
-            stepSize: 10,
-            callback: function(value, index, values){
-              return  value +  'km'
-            }
-          }
-        }]
-      },
-    }
-     });
-  </script>
+<script>
+var ctx1 = document.getElementById("myLineChart1");
+var ctx2 = document.getElementById("myLineChart2");
+var myLineChart1 = new Chart(ctx1, {
+	type: 'line',
+	data: {
+		labels: ['0', '1時間', '2時間', '3時間', '4時間'],
+		datasets: [
+			{
+				label: '○○○',
+				data: [35, 34, 37, 35, 34, 35, 34, 25],
+				borderColor: "rgba(255,100,100,1)",
+				backgroundColor: "rgba(229,229,229,.2)"
+			}
+		],
+	},
+	options: {
+		title: {
+			display: true,
+			text: '日付 カテゴリ 対象選択を表示'
+		},
+		scales: {
+			yAxes: [{
+				ticks: {
+					suggestedMax: 60,
+					suggestedMin: 0,
+					stepSize: 10,
+					callback: function(value, index, values){
+						return  value +  'km'
+					}
+				}
+			}]
+		},
+	}
+});
+var myLineChart2 = new Chart(ctx2, {
+type: 'line',
+	data: {
+		labels: ['0', '1時間', '2時間', '3時間', '4時間'],
+		datasets: [
+			{
+				label: '○○○',
+				data: [35, 34, 37, 35, 34, 35, 34, 25],
+				borderColor: "rgba(255,100,100,1)",
+				backgroundColor: "rgba(229,229,229,.2)"
+			}
+		],
+	},
+	options: {
+		title: {
+			display: true,
+			text: '日付 カテゴリ 対象選択を表示'
+		},
+		scales: {
+			yAxes: [{
+				ticks: {
+					suggestedMax: 60,
+					suggestedMin: 0,
+					stepSize: 10,
+					callback: function(value, index, values){
+						return  value +  'km'
+					}
+				}
+			}]
+		},
+	}
+});
+</script>
 </body>
 </html>
