@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* BASIC */
+html {
+  height: 100%; }
+
+body {
+  font-family: Helvetica Neue, Helvetica, Hiragino Sans, 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+  height: 100vh; }
+
+header {
+  border-top: #337ab7 0.5rem solid;
+  border-bottom: #ddd 0.25rem solid;
+  width: 100%;
+  background: #fff;
+  z-index: 100; }
+header h1 {
+  color: #7b7979; }
+
+footer {
+  border-bottom: #337ab7 0.5rem solid; }
+
+/* STRUCTURE */
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100% - 30%);
+  padding: 20px; }
+
+.login_title {
+  max-width: 450px;
+  display: flex; }
+.login_title .line {
+  background-image: url("../img/h2_line.png");
+  background-repeat: repeat-x;
+  background-position: left center;
+  width: 35%; }
+.login_title h2 {
+  width: 30%;
+  background: none; }
+
+#formContent {
+  background: #f7f7f7;
+  padding: 12px 6px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box; }
+
+/*
+h2.inactive {
+  color: #cccccc;
+}
+
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}
+*/
+.bg_line {
+  background: url("../img/h2_line.png") repeat-x left center; }
+
+/* FORM TYPOGRAPHY*/
+input[type=button], input[type=submit], input[type=reset] {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px; }
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95); }
+
+input[type=text] {
+  border: none;
+  color: #999;
+  padding: 0.375rem 0.75rem;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ddd;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9; }
+
+input[type=text]:placeholder {
+  color: #cccccc; }
+
+/* OTHERS */
+*:focus {
+  outline: none; }

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<!-- Optional JavaScript -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>-->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS 
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->
+	<title>監視画面</title>
+
+</head>
+<body>
+<header>
+	<h1 class="p-3 text-center">監視画面</h1>
+</header>
+<main>
+	<section class="py-4">
+		<div class="container">
+			<div class="row mr-1 mb-3">
+				<div class="col-3"></div>
+				<div class="col-7"><h2 class="h-100 d-flex align-items-center h3 text-secondary">charger管理</h2></div>
+				<!--<div class="col-4 bg_line"></div>-->
+				<div class="col-2"><a href="" class="btn btn-warning btn-lg w-100 text-center">更　新</a></div>
+			</div>
+			<div class="row mb-2">
+				<div class="col-3">
+					<div class="list-group">
+						<a href="monitor_monitoring.html" class="list-group-item mb-2 mr-2">監　視</a>
+						<a href="monitor_data.html" class="list-group-item mb-2 mr-2">集　計</a>
+						<a href="#" class="list-group-item mb-2 mr-2">アカウント管理</a>
+						<a href="#" class="list-group-item mr-2 active">charger管理</a>
+					</div>
+				</div>
+				<div class="col-9">
+					<div class="embed-responsive embed-responsive-16by9 mb-4">
+						<!-- ここに iframe 要素を挿入 -->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8278534024994!2d139.7649307510142!3d35.68124053748136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1583411404403!5m2!1sja!2sjp" width="auto" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<div class="col-3"></div>
+				<div class="col-9"><h2 class="d-flex align-items-center h3 text-secondary">詳細情報</h2></div>
+				<!--<div class="col-6 bg_line"></div>-->
+			</div>
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-9">
+					<div class="row">
+					<div class="col-6">
+						<span class="badge badge-danger mb-2">チャージャー情報</span>
+						<table class="table table-bordered text-secondary">
+							<tr>
+								<td class="bg-light" style="width:40%">cs_id</td>
+								<td class="text-center" colspan="2">-</td>
+							</tr>
+							<tr>
+								<td class="bg-light" rowspan="5">S1</td>
+								<td class="bg-light text-center" colspan="2">Available</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Voltage</td>
+								<td class="text-center">228.6</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Current</td>
+								<td class="text-center">10.021</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Power</td>
+								<td class="text-center">2.363</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Energy Units</td>
+								<td class="text-center">1.181</td>
+							</tr>
+							<tr>
+								<td class="bg-light" rowspan="5">S2</td>
+								<td class="bg-light text-center" colspan="2">Busy</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Voltage</td>
+								<td class="text-center">226.0</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Current</td>
+								<td class="text-center">15.218</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Power</td>
+								<td class="text-center">0.669</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Energy Units</td>
+								<td class="text-center">2.158</td>
+							</tr>
+							<tr>
+								<td class="bg-light" rowspan="5">S2</td>
+								<td class="bg-light text-center" colspan="2">Available</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Voltage</td>
+								<td class="text-center">0.0</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Current</td>
+								<td class="text-center">3.007</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Power</td>
+								<td class="text-center">3.315</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Energy Units</td>
+								<td class="text-center">13.461</td>
+							</tr>
+							<tr>
+								<td class="bg-light">HLT_STS</td>
+								<td class="text-center" colspan="2">System OK</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-6">
+						<span class="badge badge-danger mb-2">アラート情報</span>
+						<table class="table table-bordered text-secondary">
+							<tr>
+								<td class="bg-light" style="width:40%">S1</td>
+								<td class="text-center">Low Voltage in Y-Phase</td>
+							</tr>
+							<tr>
+								<td class="bg-light">S2</td>
+								<td class="text-center">-</td>
+							</tr>
+							<tr>
+								<td class="bg-light">S3</td>
+								<td class="text-center">Over load in Socket 1</td>
+							</tr>
+							<tr>
+								<td class="bg-light">System Health Status</td>
+								<td class="text-center">Full System Fault</td>
+							</tr>
+							<tr>
+								<td class="bg-light">Emergency Switch Status</td>
+								<td class="text-center">Emergency Fault</td>
+							</tr>
+						</table>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer>
+</footer>
+</body>
+</html>
