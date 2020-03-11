@@ -37,7 +37,7 @@
 					<div class="list-group">
 						<a href="#" class="list-group-item mb-2 mr-2 active">監　視</a>
 						<a href="monitor_data.html" class="list-group-item mb-2 mr-2">集　計</a>
-						<a href="#" class="list-group-item mb-2 mr-2">アカウント管理</a>
+						<a href="monitor_acount.html" class="list-group-item mb-2 mr-2">アカウント管理</a>
 						<a href="monitor_charger.html" class="list-group-item mr-2">charger管理</a>
 					</div>
 				</div>
@@ -55,70 +55,177 @@
 			</div>
 			<div class="row">
 				<div class="col-3"></div>
-				<div class="col-9">
+				<div class="col-9 mb-2">
+					<div><h3 class="h-100 d-flex align-items-center h5 text-secondary font-weight-normal">＜車の場合＞</h3></div>
 					<div class="row">
-					<div class="col-6">
-						<span class="badge badge-danger mb-2">車両情報</span>
-						<table class="table table-bordered text-secondary">
-							<tr>
-								<td class="bg-light" style="width:40%">TID</td>
-								<td class="text-center">TMS0000057</td>
-							</tr>
-							<tr>
-								<td class="bg-light">BV</td>
-								<td class="text-center">57.8</td>
-							</tr>
-							<tr>
-								<td class="bg-light">SOC</td>
-								<td class="text-center">55</td>
-							</tr>
-							<tr>
-								<td class="bg-light">TS</td>
-								<td class="text-center">26</td>
-							</tr>
-							<tr>
-								<td class="bg-light">TDT</td>
-								<td class="text-center">1013.406</td>
-							</tr>
-							<tr>
-								<td class="bg-light">SPD</td>
-								<td class="text-center">3.5</td>
-							</tr>
-							<tr>
-								<td class="bg-light">ドライバ名</td>
-								<td class="text-center">D5</td>
-							</tr>
-							<tr>
-								<td class="bg-light">vehiclename</td>
-								<td class="text-center">V4</td>
-							</tr>
-						</table>
+						<div class="col-6">
+							<span class="badge badge-danger mb-2">車両情報</span>
+							<table class="table table-bordered text-secondary">
+								<tr>
+									<td class="bg-light" style="width:40%">TID</td>
+									<td class="text-center">TMS0000057</td>
+								</tr>
+								<tr>
+									<td class="bg-light">BV</td>
+									<td class="text-center">57.8</td>
+								</tr>
+								<tr>
+									<td class="bg-light">SOC</td>
+									<td class="text-center">55</td>
+								</tr>
+								<tr>
+									<td class="bg-light">TS</td>
+									<td class="text-center">26</td>
+								</tr>
+								<tr>
+									<td class="bg-light">TDT</td>
+									<td class="text-center">1013.406</td>
+								</tr>
+								<tr>
+									<td class="bg-light">SPD</td>
+									<td class="text-center">3.5</td>
+								</tr>
+								<tr>
+									<td class="bg-light">ドライバ名</td>
+									<td class="text-center">D5</td>
+								</tr>
+								<tr>
+									<td class="bg-light">vehiclename</td>
+									<td class="text-center">V4</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-6">
+							<span class="badge badge-danger mb-2">アラート情報</span>
+							<table class="table table-bordered text-secondary">
+								<tr>
+									<td class="bg-light" style="width:40%">Battery1</td>
+									<td class="text-center">-</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Battery2</td>
+									<td class="text-center">-</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Battery3</td>
+									<td class="text-center">Low SOC Warning</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Battery1-3</td>
+									<td class="text-center">Hardware Fault Batt3</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Telematics</td>
+									<td class="text-center">Battery Full Charged</td>
+								</tr>
+							</table>
+						</div>
 					</div>
-					<div class="col-6">
-						<span class="badge badge-danger mb-2">アラート情報</span>
-						<table class="table table-bordered text-secondary">
-							<tr>
-								<td class="bg-light" style="width:40%">Battery1</td>
-								<td class="text-center">-</td>
-							</tr>
-							<tr>
-								<td class="bg-light">Battery2</td>
-								<td class="text-center">-</td>
-							</tr>
-							<tr>
-								<td class="bg-light">Battery3</td>
-								<td class="text-center">Low SOC Warning</td>
-							</tr>
-							<tr>
-								<td class="bg-light">Battery1-3</td>
-								<td class="text-center">Hardware Fault Batt3</td>
-							</tr>
-							<tr>
-								<td class="bg-light">Telematics</td>
-								<td class="text-center">Battery Full Charged</td>
-							</tr>
-						</table>
-					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3"></div>
+				<div class="col-9">
+					<div><h3 class="h-100 d-flex align-items-center h5 text-secondary font-weight-normal">＜chargerの場合＞</h3></div>
+					<div class="row">
+						<div class="col-6">
+							<span class="badge badge-danger mb-2">チャージャー情報</span>
+							<table class="table table-bordered text-secondary">
+								<tr>
+									<td class="bg-light" style="width:40%">cs_id</td>
+									<td class="text-center" colspan="2">-</td>
+								</tr>
+								<tr>
+									<td class="bg-light" rowspan="5">S1</td>
+									<td class="bg-light text-center" colspan="2">Available</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Voltage</td>
+									<td class="text-center">228.6</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Current</td>
+									<td class="text-center">10.021</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Power</td>
+									<td class="text-center">2.363</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Energy Units</td>
+									<td class="text-center">1.181</td>
+								</tr>
+								<tr>
+									<td class="bg-light" rowspan="5">S2</td>
+									<td class="bg-light text-center" colspan="2">Busy</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Voltage</td>
+									<td class="text-center">226.0</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Current</td>
+									<td class="text-center">15.218</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Power</td>
+									<td class="text-center">0.669</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Energy Units</td>
+									<td class="text-center">2.158</td>
+								</tr>
+								<tr>
+									<td class="bg-light" rowspan="5">S2</td>
+									<td class="bg-light text-center" colspan="2">Available</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Voltage</td>
+									<td class="text-center">0.0</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Current</td>
+									<td class="text-center">3.007</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Power</td>
+									<td class="text-center">3.315</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Energy Units</td>
+									<td class="text-center">13.461</td>
+								</tr>
+								<tr>
+									<td class="bg-light">HLT_STS</td>
+									<td class="text-center" colspan="2">System OK</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-6">
+							<span class="badge badge-danger mb-2">アラート情報</span>
+							<table class="table table-bordered text-secondary">
+								<tr>
+									<td class="bg-light" style="width:40%">S1</td>
+									<td class="text-center">Low Voltage in Y-Phase</td>
+								</tr>
+								<tr>
+									<td class="bg-light">S2</td>
+									<td class="text-center">-</td>
+								</tr>
+								<tr>
+									<td class="bg-light">S3</td>
+									<td class="text-center">Over load in Socket 1</td>
+								</tr>
+								<tr>
+									<td class="bg-light">System Health Status</td>
+									<td class="text-center">Full System Fault</td>
+								</tr>
+								<tr>
+									<td class="bg-light">Emergency Switch Status</td>
+									<td class="text-center">Emergency Fault</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
